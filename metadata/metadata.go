@@ -63,12 +63,12 @@ func New(m map[string]string) MD {
 //
 // Only the following ASCII characters are allowed in keys:
 //  - digits: 0-9
-//  - uppercase letters: A-Z (normalized to lower)
-//  - lowercase letters: a-z
+//  - uppercase(大写) letters: A-Z (normalized to lower)
+//  - lowercase(小写) letters: a-z
 //  - special characters: -_.
 // Uppercase letters are automatically converted to lowercase.
 //
-// Keys beginning with "grpc-" are reserved for grpc-internal use only and may
+// Keys beginning with "grpc-" are reserved(提供给.../仅为...服务) for grpc-internal use only and may
 // result in errors if set in metadata.
 func Pairs(kv ...string) MD {
 	if len(kv)%2 == 1 {
