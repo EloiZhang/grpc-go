@@ -68,7 +68,7 @@ func New(m map[string]string) MD {
 //  - special characters: -_.
 // Uppercase letters are automatically converted to lowercase.
 //
-// Keys beginning with "grpc-" are reserved(提供给.../仅为...服务) for grpc-internal use only and may
+// Keys beginning with "grpc-" are reserved(提供给.../仅为...服务) for grpc-internal(内部的) use only and may
 // result in errors if set in metadata.
 func Pairs(kv ...string) MD {
 	if len(kv)%2 == 1 {
